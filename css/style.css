@@ -1,0 +1,759 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+	--main-color: #F80303;
+	--black: #13131a;
+	--bg: #010103;
+	--border: .1rem solid rgba(255,255,255,.3);
+}
+
+*{
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: .2s linear;
+}
+
+html{
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-padding-top: 9rem;
+	scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+	width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+	background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+	background: #fff;
+	border-radius: 5rem;
+}
+
+body{
+	background: var(--bg);
+}
+
+section{
+	padding: 2rem 7%;
+}
+
+.header{
+	background: var(--bg);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.5rem 7%;
+	border-bottom: var(--border);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+.logo img{
+	height: 6rem;
+	width: 6rem;
+}
+
+.navbar a{
+	margin: 0 1rem;
+	font-size: 16px;
+	color: #fff;
+}
+
+.navbar a:hover{
+	color: var(--main-color);
+	border-bottom: .1rem solid var(--main-color);
+	padding-bottom: .5rem;
+}
+
+.icons div{
+	color: #fff;
+	cursor: pointer;
+	font-size: 2.5rem;
+	margin-left: 2rem;
+}
+
+.icons div:hover{
+	color: var(--main-color);
+}
+
+#menu-btn{
+	display: none;
+}
+
+.search-form{
+	position: absolute;
+	top: 115%;
+	right: 7%;
+	background: #fff;
+	width: 50rem;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	transform: scaleY(0);
+	transform-origin: top;
+}
+
+.search-form.active{
+	transform: scaleY(1);
+}
+
+.search-form input{
+	height: 100%;
+	width: 100%;
+	font-size: 1.6rem;
+	color: var(--black);
+	padding: 1rem;
+	text-transform: none;
+}
+
+.search-form label{
+	cursor: pointer;
+	font-size: 2.5rem;
+	margin-right: 1.5rem;
+	color: var(--black);
+
+}
+
+.search-form label:hover{
+	color: var(--main-color);
+}
+#cart-image{
+	height: 10rem;
+	width: 10rem;
+}
+
+.cart-items-container{
+	position: absolute;
+	top: 100%;
+	right: -100%;
+	height: calc(100vh - 9.5rem);
+	width: 35rem;
+	background: #fff;
+	padding: 0 1.5rem;
+}
+
+.cart-items-container.active{
+	right: 0;
+}
+
+.cart-item{
+	position: relative;
+	margin: 2rem 0;
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.fa-times{
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 2rem;
+	cursor: pointer;
+	color: var(--black);
+
+}
+
+.fa-times:hover{
+	color: var(--main-color);
+}
+
+.cart-item img{
+	height: 7rem;
+} 
+
+.content h3{
+	font-size: 2rem;
+	color: var(--black);
+	padding-bottom: .5rem;
+}
+
+.price{
+	font-size: 1.5rem;
+	color: var(--main-color);
+}
+.butn{
+	margin-top: 1rem;
+	display: inline-block;
+	padding: .9rem 3rem;
+	color: #fff;
+	background: var(--main-color);
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+	font-size: 1.8rem;
+}
+
+.butn:hover{
+	letter-spacing: .3rem;
+	background-color: orange;
+}
+
+.home{
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+
+	background: url(https://c4.wallpaperflare.com/wallpaper/1015/628/1024/tomato-hamburger-patty-sandwich-wallpaper-preview.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	justify-content: unsafe left;
+	text-align: left;
+	backdrop-filter: blur(20px);
+
+}
+.btn{
+	width: 32%;
+	cursor: pointer;
+	text-align: center;
+	font-size: 2.5rem;
+	margin-top: 1rem;
+	font-weight: bolder;
+	display: inline-block;
+	padding: 2rem .9rem;
+	color: #fff;
+	background: darkorange;
+	border-radius: 10px;
+	text-transform: uppercase;
+	animation: exam 10s infinite;
+}
+.btn:hover{
+	letter-spacing: .3rem;
+	background-color: darkred;
+}
+
+.home .contents{
+	margin-top: 8rem;
+	max-width: 90rem;
+	position: left;
+	text-overflow: left;
+	text-align: left;
+	justify-content: initial;
+	justify-items: legacy left;
+}
+
+.home .contents h3{
+	font-size: 6rem;
+	text-transform: uppercase;
+	font-weight: bolder; 
+	color: darkorange;
+	text-shadow: white;
+	animation-name: example;
+	animation-duration: 0.8s;
+}
+
+
+
+
+.home .contents h3:hover{
+	font-size: 6.7rem;
+}
+
+.home .contents p{
+	font-size: 2rem;
+	font-weight: bolder;
+	line-height: 1.8;
+	padding: 3rem 2rem	;
+	color: white;
+	text-shadow: white;
+	max-width: 70%;
+	text-align: left;
+	justify-content: left;
+	justify-items: legacy left;
+	position: left;
+/*	-webkit-text-stroke-width: .5px;
+	-webkit-text-stroke-color: white*/
+}
+.home .contents p:hover{
+	font-size: 2.2rem;
+}
+
+.heading{
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+	padding-bottom: 3.5rem ;
+	font-size: 4rem;
+}
+
+.heading span{
+	color: var(--main-color);
+	text-transform: uppercase;
+}
+
+.about .row{
+	display: flex;
+	align-items: center;
+	background: var(--black);
+	flex-wrap: wrap;
+}
+
+.row .image{
+	flex:1 1 45rem;
+}
+.row .image img{
+	width: 100%;
+}
+.contentss{
+	flex:1 1 45rem;
+	padding:2rem;
+}
+
+.contentss h3{
+	font-size: 3rem;
+	color: white;
+}
+
+.contentss p{
+	font-size: 1.6rem;
+	color: white;
+	padding: 1rem 0;
+	line-height: 1.8;
+}
+.butn2{
+	margin-top: 1rem;
+	display: inline-block;
+	padding: .9rem 3rem;
+	color: #fff;
+	background: var(--main-color);
+	cursor: pointer;
+	width: 50%;
+	text-align: center;
+	font-size: 1.8rem;
+}
+
+.butn2:hover{
+	letter-spacing: .3rem;
+	background-color: brown;
+}
+
+.menu .box-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 1.5rem;
+}
+
+.menu .box-container .box{
+	padding: 5rem;
+	text-align: center;
+	border: var(--border);
+}
+
+.menu .box-container .box img{
+	height: 10rem;
+}
+
+.menu .box-container .box h3{
+	color: white;
+	font-size: 2rem;
+	padding: 1rem 0;
+}
+
+.menu .box-container .box .price{
+	color: white;
+	font-size: 2.5rem;
+	padding: .5rem 0;
+}
+
+.menu .box-container .box .price span{
+	font-size: 1.5rem;
+	text-decoration: line-through;
+	font-weight: lighter;
+}
+
+.box-container .box:hover{
+	background: lightgray;
+	color: black;
+}
+.box-container .box:hover > *{
+	color: var(--black);
+}
+.box-container .box:hover > h3{
+	color: var(--black);
+}
+.box-container .box:hover > p{
+	color: var(--black);
+}
+
+.beverages .box-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 1.5rem;
+}
+
+.beverages .box-container .box{
+	text-align: center;
+	border: var(--border);
+	padding: 2rem;
+}
+
+.beverages .box-container .box .icons a{
+	height: 5rem;
+	width: 5rem;
+	line-height: 5rem;
+	font-size: 2rem;
+	border: var(--border);
+	color: white;
+	margin:.3rem;
+}
+
+.beverages .box-container .box .icons a:hover{
+	background: var(--main-color);
+}
+
+
+.beverages .box-container .box .image{
+	padding: 2.5rem;
+}
+
+.beverages .box-container .box .image img{
+	height: 15rem;
+}
+
+.beverages .box-container .box .content h3{
+	color: white;
+	font-size: 2.5rem;
+}
+
+.beverages .box-container .box .content .stars{
+	padding: 1.5rem;
+}
+
+.fa-star{
+	font-size: 1.5rem;
+	color: var(--main-color);
+}
+
+.fa-star-half-alt{
+	font-size: 1.5rem;
+	color: var(--main-color)
+}
+
+.icons .image .content .price{
+	color: white;
+	font-size: 2.5rem;
+	padding: .5rem 0;
+}
+.bevpr{
+	text-decoration: line-through;
+}
+
+.review .box-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 1.5rem;
+}
+.review .box-container .box{
+	border: var(--border);
+	text-align: center;
+	padding: 3rem 2rem;
+}
+
+.review .box-container .box p{
+	font-size: 1.5rem;
+	line-height: 1.8rem;
+	color: white;
+	padding: 2rem 0;
+}
+
+.review .box-container .box .user{
+	height: 7rem;
+	width: 7rem;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.review .box-container .box h3{
+	padding: 1rem 0;
+	font-size: 2rem;
+	color: white;
+}
+
+.review .box-container .box .stars i{
+	font-size: 1.5rem;
+	color: var(--main-color);
+}
+
+.review .box-container .box .quote{
+	color: white;
+	outline-color: white;
+	height: 5rem;
+	filter: opacity(10) drop-shadow(0 0 0 white);
+}
+
+#mapping{
+	display: flex;
+	align-items: center;
+	background: var(--black);
+	flex-wrap: wrap;
+	gap: 2rem;
+	padding: 5rem 2rem;
+}
+
+.map{
+	flex: 1 1 45rem;
+	width: 50%;
+	object-fit: cover;
+}
+
+form{
+	flex: 1 1 45rem;
+	padding: 5rem 2rem;
+	text-align: center;
+}
+
+form h3{
+	text-transform: uppercase;
+	font-size: 3.5rem;
+	color: white;
+}
+
+form .inputBox{
+	display: flex;
+	align-items: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	background: var(--black);
+	border: var(--border);
+}
+form .inputBox span{
+	color: white;
+	font-size: 2rem;
+	padding-left: 2rem;
+}
+
+form .inputBox input{
+	width: 100%;
+	padding: 2rem;
+	font-size: 1.7rem;
+	color: white;
+	text-transform: none;
+	background: none;
+}
+
+.blogs .box-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 1.5rem;	
+}
+
+.blogs .box-container .box{
+	border: var(--border);
+}
+.blogs .box-container .box .image{
+	height: 25rem;
+	overflow: hidden;
+	width: 100%;
+}
+
+.blogs .box-container .box .image img{
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+.blogs .box-container .box:hover .image img{
+	transform: scale(1.2);
+}
+.blogs .box-container .box:hover .contents p{
+	color: black;
+}
+.blogs .box-container .box .contents{
+	padding: 2rem;
+}
+.blogs .box-container .box .contents .title{
+	font-size: 2.5rem;
+	line-height: 1.5;
+	color: white;
+}
+.blogs .box-container .box .contents .title:hover{
+	color: var(--main-color);
+}
+.blogs .box-container .box .contents span{
+	color: var(--main-color);
+	display: block;
+	padding-top: 1rem;
+	font-size: 2rem;
+}
+.blogs .box-container .box .contents p{
+	font-size: 1.6rem;
+	line-height: 1.8;
+	color: white;
+	padding: 1rem 0;
+}
+
+.footer{
+	background: var(--black);
+	text-align: center;
+}
+.footer .foot{
+	padding: 1rem 0;
+}
+.footer .foot a{
+	height: 5rem;
+	width: 5rem;
+	line-height: 5rem;
+	font-size: 2rem;
+	color: white;
+	border: var(--border);
+	margin: .3rem;
+	border-radius: 50%;
+}
+.footer .foot a:hover{
+	background-color: var(--main-color);
+}
+.footer .links{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 2rem 0;
+	gap: 1rem;
+}
+.footer .links a{
+	padding: .7rem 2rem;
+	color: white;
+	border: var(--border);
+	font-size: 2rem;
+}
+.footer .links a:hover{
+	background: var(--main-color);
+}
+.footer .credit{
+	font-size: 2rem;
+	color: white;
+	font-weight: lighter;
+	padding: 1.5rem;
+}
+.footer .credit span{
+	color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media queries*/
+@media (max-width: 991px){
+	
+	html{
+	font-size: 55%;
+	}
+
+	.header{
+		padding: 1.5rem 2rem;
+	}
+
+	section{
+	padding: 2rem;
+}
+
+
+}
+
+@media (max-width: 768px){
+	 
+#menu-btn{
+	display: inline-block;
+	}
+
+.navbar{
+	position: absolute;
+	top: 100%;
+	right: -100%;
+	background: #fff;
+	width: 30rem;
+	height: calc(100vh - 9.5rem);
+}
+
+.navbar.active{
+	right: 0;
+}
+
+.navbar a{
+	color: var(--black);
+	display: block;
+	margin: 1.5rem;
+	padding: .5rem;
+	font-size: 2rem;
+}
+
+.search-form{
+	width: 90%;
+	right: 2rem;
+}
+
+.home{
+	justify-content: center;
+	text-align: center;
+}
+
+.contents h3{
+	font-size: 4.5rem;
+}
+
+.contents p{
+	font-size: 1.5rem;
+}
+
+
+}
+
+@media (max-width: 450px){
+	
+	html{
+	font-size: 50%;
+	}
+
+
+
+}
+
+@keyframes example {
+	0%{ color: white;letter-spacing: 0rem;}
+	50%{ color: darkorange;letter-spacing: 1rem;}
+	100%{ color: darkorange;letter-spacing: 0rem;}
+}
+@keyframes exam{
+	0%{background: darkorange;}
+	20%{background: red;}
+	40%{background: darkgreen;}
+	60%{background: darkviolet;}
+	80%{background: brown;}
+	100%{background: darkblue;}
+}
