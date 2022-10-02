@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@100;300;400;500;700&display=swap');
 
 :root{
 	--main-color: #F80303;
@@ -9,7 +8,6 @@
 }
 
 *{
-	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -49,6 +47,7 @@ section{
 .header{
 	background: var(--bg);
 	display: flex;
+	font-family: 'Roboto', sans-serif;
 	align-items: center;
 	justify-content: space-between;
 	padding: 1.5rem 7%;
@@ -218,6 +217,7 @@ section{
 	width: 32%;
 	cursor: pointer;
 	text-align: center;
+	font-family: 'Roboto', sans-serif;
 	font-size: 2.5rem;
 	margin-top: 1rem;
 	font-weight: bolder;
@@ -244,11 +244,10 @@ section{
 	justify-items: legacy left;
 }
 
-.home .contents h3{
-	font-size: 6rem;
-	text-transform: uppercase;
+.contents h3{
 	font-family: 'Permanent Marker', cursive;
-	font-weight: bolder; 
+	font-size: 6rem;
+	text-transform: uppercase; 
 	color: darkorange;
 	text-shadow: white;
 	animation-name: example;
@@ -265,6 +264,7 @@ section{
 .home .contents p{
 	font-size: 2rem;
 	font-weight: bolder;
+	font-family: 'Roboto', sans-serif;
 	line-height: 1.8;
 	padding: 3rem 2rem	;
 	color: white;
@@ -287,11 +287,16 @@ section{
 	text-transform: uppercase;
 	padding-bottom: 3.5rem ;
 	font-size: 4rem;
+	font-family: 'Roboto', sans-serif;
 }
 
 .heading span{
 	color: var(--main-color);
 	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+}
+.about{
+	font-family: 'Roboto', sans-serif;
 }
 
 .about .row{
@@ -340,6 +345,10 @@ section{
 	background-color: brown;
 }
 
+.menu{
+	font-family: 'Roboto', sans-serif;
+}
+
 .menu .box-container{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -386,6 +395,10 @@ section{
 }
 .box-container .box:hover > p{
 	color: var(--black);
+}
+
+.beverages{
+	font-family: 'Roboto', sans-serif;
 }
 
 .beverages .box-container{
@@ -451,6 +464,10 @@ section{
 	text-decoration: line-through;
 }
 
+.review{
+	font-family: 'Roboto', sans-serif;
+}
+
 .review .box-container{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -513,6 +530,7 @@ form{
 	flex: 1 1 45rem;
 	padding: 5rem 2rem;
 	text-align: center;
+	font-family: 'Roboto', sans-serif;
 }
 
 form h3{
@@ -542,6 +560,10 @@ form .inputBox input{
 	color: white;
 	text-transform: none;
 	background: none;
+}
+
+.blogs{
+	font-family: 'Roboto', sans-serif;
 }
 
 .blogs .box-container{
@@ -597,6 +619,7 @@ form .inputBox input{
 .footer{
 	background: var(--black);
 	text-align: center;
+	font-family: 'Roboto', sans-serif;
 }
 .footer .foot{
 	padding: 1rem 0;
